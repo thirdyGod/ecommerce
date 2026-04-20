@@ -1,0 +1,114 @@
+/* =========================================
+   VAULT STORE — index.css (homepage only)
+   ========================================= */
+
+/* ─── HERO ───────────────────────────────── */
+.hero {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--bg-border);
+  padding: 72px 28px;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  position: relative;
+  overflow: hidden;
+  min-height: 420px;
+}
+
+.hero__content {
+  flex: 1;
+  max-width: 520px;
+  position: relative;
+  z-index: 2;
+  animation: fadeUp 0.6s ease both;
+}
+
+.hero__eyebrow {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: var(--neon-magenta);
+  margin-bottom: 14px;
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(72px, 9vw, 120px);
+  font-weight: 900;
+  letter-spacing: 4px;
+  line-height: 0.88;
+  color: var(--text-primary);
+  margin-bottom: 22px;
+  text-transform: uppercase;
+}
+
+.hero__sub {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 380px;
+  margin-bottom: 32px;
+  letter-spacing: 0.5px;
+}
+
+.hero__cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Hero tri logos */
+.hero__logos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  animation: fadeUp 0.6s 0.15s ease both;
+}
+
+.hero__logos .tri {
+  transition: transform 0.3s, filter 0.3s;
+  cursor: pointer;
+}
+.hero__logos .tri:hover {
+  transform: scale(1.08) rotate(-2deg);
+  filter: brightness(1.2) drop-shadow(0 0 14px currentColor);
+}
+
+/* Decorative background text */
+.hero__bg-text {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-size: clamp(160px, 18vw, 240px);
+  font-weight: 900;
+  letter-spacing: -8px;
+  color: var(--bg-border);
+  user-select: none;
+  pointer-events: none;
+  z-index: 1;
+  line-height: 1;
+}
+
+/* ─── ANIMATIONS ─────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Stagger product cards */
+.product-card { animation: fadeUp 0.5s ease both; }
+.product-card:nth-child(1) { animation-delay: 0.05s; }
+.product-card:nth-child(2) { animation-delay: 0.10s; }
+.product-card:nth-child(3) { animation-delay: 0.15s; }
+.product-card:nth-child(4) { animation-delay: 0.20s; }
+.product-card:nth-child(5) { animation-delay: 0.25s; }
+.product-card:nth-child(6) { animation-delay: 0.30s; }
+.product-card:nth-child(7) { animation-delay: 0.35s; }
+.product-card:nth-child(8) { animation-delay: 0.40s; }

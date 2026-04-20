@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VAULT — Your Bag</title>
+  <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="cart.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__logo"><a href="index.html">VAULT</a></div>
+    <div class="nav__search">
+      <input type="text" placeholder="SEARCH DROPS, BRANDS, COLLABS..." />
+      <button>GO</button>
+    </div>
+    <div class="nav__right">
+      <a href="shop.html" class="nav__link">DROPS</a>
+      <a href="shop.html" class="nav__link">BRANDS</a>
+      <a href="shop.html" class="nav__link">SALE</a>
+      <a href="cart.html" class="nav__cart">
+        ▣ BAG <span class="cart-count">3</span>
+      </a>
+    </div>
+  </nav>
+
+  <div class="cart-layout">
+
+    <!-- CART ITEMS -->
+    <div class="cart-items">
+      <div class="cart-header">
+        <h1 class="cart-title">YOUR BAG</h1>
+        <p class="cart-subtitle">3 ITEMS</p>
+      </div>
+
+      <!-- Item 1 -->
+      <div class="cart-item">
+        <div class="cart-item__img" style="background:#0d0d1a;">
+          <div class="tri-sm tri-sm--cyan"></div>
+        </div>
+        <div class="cart-item__details">
+          <p class="cart-item__brand">VAULT</p>
+          <p class="cart-item__name">TRI-LOGO HOODIE</p>
+          <div class="cart-item__meta">
+            <span class="cart-item__attr">COLOUR: <strong>CYAN</strong></span>
+            <span class="cart-item__attr">SIZE: <strong>S</strong></span>
+          </div>
+          <div class="cart-item__controls">
+            <div class="qty-control">
+              <button class="qty-btn" onclick="changeQty(this,-1)">−</button>
+              <span class="qty-val">1</span>
+              <button class="qty-btn" onclick="changeQty(this,1)">+</button>
+            </div>
+            <button class="cart-item__remove" onclick="removeItem(this)">REMOVE</button>
+          </div>
+        </div>
+        <p class="cart-item__price">$148</p>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="cart-item">
+        <div class="cart-item__img" style="background:#1a100d;">
+          <div class="tri-sm tri-sm--magenta"></div>
+        </div>
+        <div class="cart-item__details">
+          <p class="cart-item__brand">VAULT</p>
+          <p class="cart-item__name">CORD JACKET — STONE</p>
+          <div class="cart-item__meta">
+            <span class="cart-item__attr">COLOUR: <strong>STONE</strong></span>
+            <span class="cart-item__attr">SIZE: <strong>M</strong></span>
+          </div>
+          <div class="cart-item__controls">
+            <div class="qty-control">
+              <button class="qty-btn" onclick="changeQty(this,-1)">−</button>
+              <span class="qty-val">1</span>
+              <button class="qty-btn" onclick="changeQty(this,1)">+</button>
+            </div>
+            <button class="cart-item__remove" onclick="removeItem(this)">REMOVE</button>
+          </div>
+        </div>
+        <p class="cart-item__price">$210</p>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="cart-item">
+        <div class="cart-item__img" style="background:#0f1a12;">
+          <div class="tri-sm tri-sm--orange"></div>
+        </div>
+        <div class="cart-item__details">
+          <p class="cart-item__brand">VAULT</p>
+          <p class="cart-item__name">5-PANEL CAP</p>
+          <div class="cart-item__meta">
+            <span class="cart-item__attr">COLOUR: <strong>FOREST</strong></span>
+            <span class="cart-item__attr">SIZE: <strong>ONE SIZE</strong></span>
+          </div>
+          <div class="cart-item__controls">
+            <div class="qty-control">
+              <button class="qty-btn" onclick="changeQty(this,-1)">−</button>
+              <span class="qty-val">1</span>
+              <button class="qty-btn" onclick="changeQty(this,1)">+</button>
+            </div>
+            <button class="cart-item__remove" onclick="removeItem(this)">REMOVE</button>
+          </div>
+        </div>
+        <p class="cart-item__price">$62</p>
+      </div>
+
+      <!-- Promo code -->
+      <div class="promo-input">
+        <p class="sidebar__label" style="font-family:var(--font-display);font-size:10px;font-weight:800;letter-spacing:4px;color:var(--text-muted);margin-bottom:10px;">PROMO CODE</p>
+        <div class="promo-input__row">
+          <input type="text" placeholder="ENTER CODE..." class="promo-input__field" />
+          <button class="btn btn--ghost">APPLY</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ORDER SUMMARY -->
+    <div class="cart-summary">
+      <h2 class="cart-summary__title">ORDER SUMMARY</h2>
+
+      <div class="summary-rows">
+        <div class="summary-row">
+          <span>SUBTOTAL</span>
+          <span id="subtotal">$420</span>
+        </div>
+        <div class="summary-row">
+          <span>SHIPPING</span>
+          <span class="summary-row__free">FREE</span>
+        </div>
+        <div class="summary-row">
+          <span>TAXES</span>
+          <span>CALCULATED AT CHECKOUT</span>
+        </div>
+      </div>
+
+      <div class="summary-total">
+        <span>TOTAL</span>
+        <span id="total">$420</span>
+      </div>
+
+      <a href="#" class="btn btn--primary" style="display:block;text-align:center;width:100%;font-size:18px;padding:16px;">CHECKOUT</a>
+      <a href="shop.html" class="btn btn--ghost" style="display:block;text-align:center;width:100%;margin-top:10px;">CONTINUE SHOPPING</a>
+
+      <div class="cart-meta">
+        <p>✓ FREE WORLDWIDE SHIPPING ON ORDERS OVER $150</p>
+        <p>✓ SECURE CHECKOUT — SSL ENCRYPTED</p>
+        <p>✓ 14-DAY RETURNS — UNWORN ITEMS ONLY</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__logo">VAULT</div>
+      <div class="footer__links">
+        <a href="#" class="footer__link">INSTAGRAM</a>
+        <a href="#" class="footer__link">TIKTOK</a>
+        <a href="#" class="footer__link">RETURNS</a>
+        <a href="#" class="footer__link">BORING STUFF</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 VAULT SKATE CO. — ALL RIGHTS RESERVED</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

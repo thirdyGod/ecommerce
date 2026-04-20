@@ -1,0 +1,179 @@
+/* =========================================
+   VAULT STORE — shop.css
+   ========================================= */
+
+.shop-layout {
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--bg-border);
+}
+
+/* ─── SIDEBAR ────────────────────────────── */
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  background: var(--bg-surface);
+  border-right: 1px solid var(--bg-border);
+  padding: 28px 20px;
+  position: sticky;
+  top: calc(var(--nav-h) + var(--strip-h));
+  max-height: calc(100vh - var(--nav-h) - var(--strip-h));
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg-border) transparent;
+}
+
+.sidebar__block {
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--bg-border);
+}
+.sidebar__block:last-of-type { border-bottom: none; }
+
+.sidebar__label {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.sidebar__select {
+  width: 100%;
+  background: var(--bg-elevated);
+  border: 1px solid var(--bg-border);
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 8px 10px;
+  outline: none;
+  cursor: pointer;
+}
+.sidebar__select:focus { border-color: var(--neon-cyan); }
+
+.sidebar__check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.sidebar__check:hover { color: var(--text-primary); }
+.sidebar__check input[type="checkbox"] {
+  accent-color: var(--neon-cyan);
+  width: 14px;
+  height: 14px;
+}
+
+.sidebar__sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.size-btn {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  background: var(--bg-elevated);
+  border: 1px solid var(--bg-border);
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.size-btn:hover { border-color: var(--neon-cyan); color: var(--neon-cyan); }
+.size-btn.active {
+  background: var(--neon-cyan);
+  color: var(--bg-base);
+  border-color: var(--neon-cyan);
+}
+
+/* ─── MAIN ───────────────────────────────── */
+.shop-main { flex: 1; min-width: 0; }
+
+.shop-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--bg-border);
+  background: var(--bg-surface);
+}
+
+.shop-count {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--text-muted);
+}
+.shop-count strong {
+  color: var(--text-primary);
+  font-weight: 900;
+}
+
+.shop-view { display: flex; gap: 6px; }
+.view-btn {
+  background: var(--bg-elevated);
+  border: 1px solid var(--bg-border);
+  color: var(--text-muted);
+  font-size: 16px;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.view-btn.active, .view-btn:hover {
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+}
+
+/* ─── PAGINATION ─────────────────────────── */
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 28px 24px;
+  border-top: 1px solid var(--bg-border);
+}
+.page-btn {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  background: var(--bg-elevated);
+  border: 1px solid var(--bg-border);
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.page-btn:hover, .page-btn.active {
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+}
+.page-dots {
+  color: var(--text-muted);
+  font-size: 14px;
+  padding: 0 4px;
+}
+.page-next {
+  margin-left: auto;
+  background: var(--neon-cyan);
+  color: var(--bg-base);
+  border-color: var(--neon-cyan);
+}
+.page-next:hover {
+  background: var(--neon-magenta);
+  border-color: var(--neon-magenta);
+  color: #fff;
+}

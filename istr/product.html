@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VAULT — Tri-Logo Hoodie</title>
+  <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="product.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__logo"><a href="index.html">VAULT</a></div>
+    <div class="nav__search">
+      <input type="text" placeholder="SEARCH DROPS, BRANDS, COLLABS..." />
+      <button>GO</button>
+    </div>
+    <div class="nav__right">
+      <a href="shop.html" class="nav__link">DROPS</a>
+      <a href="shop.html" class="nav__link">BRANDS</a>
+      <a href="shop.html" class="nav__link">SALE</a>
+      <a href="cart.html" class="nav__cart">
+        ▣ BAG <span class="cart-count">3</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- CAT STRIP -->
+  <div class="cat-strip">
+    <a href="shop.html" class="cat-strip__item">ALL DROPS</a>
+    <a href="shop.html" class="cat-strip__item active">TOPS</a>
+    <a href="shop.html" class="cat-strip__item">BOTTOMS</a>
+    <a href="shop.html" class="cat-strip__item">OUTERWEAR</a>
+    <a href="shop.html" class="cat-strip__item">FOOTWEAR</a>
+    <a href="shop.html" class="cat-strip__item">ACCESSORIES</a>
+    <a href="shop.html" class="cat-strip__item">SKATE</a>
+    <a href="shop.html" class="cat-strip__item">COLLAB</a>
+    <a href="shop.html" class="cat-strip__item">ARCHIVE</a>
+  </div>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="index.html">HOME</a>
+    <span>/</span>
+    <a href="shop.html">TOPS</a>
+    <span>/</span>
+    <span class="breadcrumb__current">TRI-LOGO HOODIE</span>
+  </div>
+
+  <!-- PRODUCT LAYOUT -->
+  <div class="product-layout">
+
+    <!-- GALLERY -->
+    <div class="gallery">
+      <div class="gallery__main">
+        <div class="gallery__img gallery__img--main" id="mainImg" style="background:#0d0d1a;">
+          <div class="tri" style="width:140px;height:120px;" id="mainTri">
+            <div class="tri--cyan" style="width:140px;height:120px;clip-path:polygon(50% 0%, 100% 100%, 0% 100%);background:var(--neon-cyan);position:relative;">
+              <div style="position:absolute;top:22%;left:17%;right:17%;bottom:10%;clip-path:polygon(50% 0%, 100% 100%, 0% 100%);background:#0d0d1a;"></div>
+            </div>
+          </div>
+          <span class="badge badge--new" style="position:absolute;top:20px;left:20px;">NEW</span>
+        </div>
+      </div>
+      <div class="gallery__thumbs">
+        <div class="gallery__thumb active" style="background:#0d0d1a;" onclick="setColor('cyan', this)">
+          <div style="width:36px;height:30px;clip-path:polygon(50% 0%,100% 100%,0% 100%);background:var(--neon-cyan);position:relative;">
+            <div style="position:absolute;top:25%;left:18%;right:18%;bottom:12%;clip-path:polygon(50% 0%,100% 100%,0% 100%);background:#0d0d1a;"></div>
+          </div>
+        </div>
+        <div class="gallery__thumb" style="background:#1a0d14;" onclick="setColor('magenta', this)">
+          <div style="width:36px;height:30px;clip-path:polygon(50% 0%,100% 100%,0% 100%);background:var(--neon-magenta);position:relative;">
+            <div style="position:absolute;top:25%;left:18%;right:18%;bottom:12%;clip-path:polygon(50% 0%,100% 100%,0% 100%);background:#1a0d14;"></div>
+          </div>
+        </div>
+        <div class="gallery__thumb" style="background:#1a0f0d;" onclick="setColor('orange', this)">
+          <div style="width:36px;height:30px;clip-path:polygon(50% 0%,100% 100%,0% 100%);background:var(--neon-orange);position:relative;">
+            <div style="position:absolute;top:25%;left:18%;right:18%;bottom:12%;clip-path:polygon(50% 0%,100% 100%,0% 100%);background:#1a0f0d;"></div>
+          </div>
+        </div>
+        <div class="gallery__thumb" style="background:#0a0a0a;" onclick="setColor('white', this)">
+          <div style="width:36px;height:30px;clip-path:polygon(50% 0%,100% 100%,0% 100%);background:#f0f0f8;position:relative;">
+            <div style="position:absolute;top:25%;left:18%;right:18%;bottom:12%;clip-path:polygon(50% 0%,100% 100%,0% 100%);background:#0a0a0a;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT INFO -->
+    <div class="product-info">
+      <p class="product-info__brand">VAULT</p>
+      <h1 class="product-info__title">TRI-LOGO HOODIE</h1>
+
+      <div class="product-info__price-row">
+        <span class="product-info__price">$148</span>
+        <span class="badge badge--new">NEW DROP</span>
+      </div>
+
+      <!-- COLOR -->
+      <div class="product-info__block">
+        <p class="product-info__label">COLOUR — <span id="colorLabel" class="product-info__value">CYAN</span></p>
+        <div class="product-info__colors">
+          <button class="color-swatch color-swatch--cyan active" onclick="setColor('cyan', this)" title="Cyan"></button>
+          <button class="color-swatch color-swatch--magenta" onclick="setColor('magenta', this)" title="Magenta"></button>
+          <button class="color-swatch color-swatch--orange" onclick="setColor('orange', this)" title="Orange"></button>
+          <button class="color-swatch color-swatch--white" onclick="setColor('white', this)" title="White"></button>
+        </div>
+      </div>
+
+      <!-- SIZE -->
+      <div class="product-info__block">
+        <p class="product-info__label">SIZE</p>
+        <div class="product-info__sizes">
+          <button class="size-btn size-btn--lg">XS</button>
+          <button class="size-btn size-btn--lg active">S</button>
+          <button class="size-btn size-btn--lg">M</button>
+          <button class="size-btn size-btn--lg">L</button>
+          <button class="size-btn size-btn--lg">XL</button>
+          <button class="size-btn size-btn--lg sold-out" disabled>XXL</button>
+        </div>
+        <p class="product-info__size-note">XXL SOLD OUT — NO RESTOCK</p>
+      </div>
+
+      <!-- QTY + ADD -->
+      <div class="product-info__block">
+        <div class="product-info__atc">
+          <div class="qty-control">
+            <button class="qty-btn" onclick="changeQty(-1)">−</button>
+            <span class="qty-val" id="qty">1</span>
+            <button class="qty-btn" onclick="changeQty(1)">+</button>
+          </div>
+          <button class="btn btn--primary btn--atc" onclick="addToCart()">ADD TO BAG</button>
+        </div>
+      </div>
+
+      <!-- DESCRIPTION -->
+      <div class="product-info__desc">
+        <p>Heavyweight 400gsm fleece. Embroidered Vault tri-logo on chest, printed on back. Dropped shoulder. Ribbed cuffs and hem. Garment-dyed after construction for a worn-in feel that gets better with each wash.</p>
+        <ul>
+          <li>100% Organic Cotton Fleece</li>
+          <li>400gsm weight</li>
+          <li>Embroidered tri-logo</li>
+          <li>Dropped shoulder fit</li>
+          <li>Garment dyed</li>
+          <li>Made in Portugal</li>
+        </ul>
+      </div>
+
+      <!-- META -->
+      <div class="product-info__meta">
+        <div class="meta-row">
+          <span class="meta-label">SKU</span>
+          <span class="meta-val">VLT-H001-CYN</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">SHIPS</span>
+          <span class="meta-val">2–5 BUSINESS DAYS</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">RETURNS</span>
+          <span class="meta-val">14 DAYS — UNWORN ONLY</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RELATED -->
+  <section class="section">
+    <div class="section__head">
+      <h2 class="section__title">YOU MIGHT ALSO WANT</h2>
+      <a href="shop.html" class="section__link">VIEW ALL →</a>
+    </div>
+    <div class="product-grid">
+      <a href="product.html" class="product-card">
+        <div class="product-card__img" style="background:#1a0d14;"><div class="tri-sm tri-sm--magenta"></div></div>
+        <div class="product-card__info">
+          <p class="product-card__tag">TOPS</p>
+          <p class="product-card__name">Tri-Logo Tee — Magenta</p>
+          <div class="product-card__bottom"><span class="product-card__price">$58</span></div>
+        </div>
+      </a>
+      <a href="product.html" class="product-card">
+        <div class="product-card__img" style="background:#0d0d1a;"><div class="tri-sm tri-sm--white"></div></div>
+        <div class="product-card__info">
+          <p class="product-card__tag">BOTTOMS</p>
+          <p class="product-card__name">Wide Leg Cargo</p>
+          <div class="product-card__bottom"><span class="product-card__price">$188</span></div>
+        </div>
+      </a>
+      <a href="product.html" class="product-card">
+        <div class="product-card__img" style="background:#0f1a12;"><div class="tri-sm tri-sm--orange"></div><span class="badge badge--new">NEW</span></div>
+        <div class="product-card__info">
+          <p class="product-card__tag">ACCESSORIES</p>
+          <p class="product-card__name">5-Panel Cap</p>
+          <div class="product-card__bottom"><span class="product-card__price">$62</span></div>
+        </div>
+      </a>
+      <a href="product.html" class="product-card">
+        <div class="product-card__img" style="background:#0d0d1a;"><div class="tri-sm tri-sm--cyan"></div><span class="badge badge--collab">COLLAB</span></div>
+        <div class="product-card__info">
+          <p class="product-card__tag">COLLAB</p>
+          <p class="product-card__name">Vault × Drift Bucket</p>
+          <div class="product-card__bottom"><span class="product-card__price">$78</span></div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__logo">VAULT</div>
+      <div class="footer__links">
+        <a href="#" class="footer__link">INSTAGRAM</a>
+        <a href="#" class="footer__link">TIKTOK</a>
+        <a href="#" class="footer__link">MAILING LIST</a>
+        <a href="#" class="footer__link">RETURNS</a>
+        <a href="#" class="footer__link">BORING STUFF</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 VAULT SKATE CO. — ALL RIGHTS RESERVED</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>
